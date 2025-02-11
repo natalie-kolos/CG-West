@@ -717,6 +717,9 @@ h6 {
   text-transform: uppercase;
   margin-bottom: 16px;
 }
+.service-card h3 a {
+  color: #2A2A2A;
+}
 .service-card p {
   margin-bottom: 0;
 }
@@ -1110,4 +1113,13 @@ h6 {
 }
 .contact-form {
   padding: 80px 0;
+}
+.areas-block {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+.areas-block p {
+  margin-bottom: 0;
 }
