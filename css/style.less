@@ -1011,7 +1011,8 @@ h6 {
     display: flex;
     align-items: center;
     gap: 24px;
-    @media @breakpoint-mobile-sm{
+
+    @media @breakpoint-mobile-sm {
       flex-direction: column;
       align-items: center;
       margin-bottom: 24px;
@@ -1023,6 +1024,7 @@ h6 {
       flex-direction: column;
       align-items: center;
       width: 100%;
+
       h3 {
 
         font-size: 22px;
@@ -1055,4 +1057,46 @@ h6 {
       }
     }
   }
+}
+
+
+.contact-form-block {
+  text-align: center;
+  margin-bottom: 16px;
+
+  .features-block__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid @dark;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  p {
+    line-height: 1.2;
+    margin-bottom: 6px;
+
+    a {
+      color: @secondary;
+    }
+  }
+
+  .heading-primary {
+    text-align: center;
+    color: @primary;
+    margin-top: 32px;
+  }
+}
+
+.contact-form{
+  padding: 80px 0;
 }
