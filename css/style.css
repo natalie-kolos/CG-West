@@ -1210,6 +1210,11 @@ article ul.list-custom li::before {
     pointer-events: none;
   }
 }
+.dropdown-item.active,
+.dropdown-item:active {
+  color: #DB9D2B;
+  background-color: transparent;
+}
 /* Стрелка для dropdown */
 .dropdown-toggle-custom {
   border: none;
