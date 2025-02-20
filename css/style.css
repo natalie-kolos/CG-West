@@ -1195,3 +1195,50 @@ article ul.list-custom li::before {
   /* 35.2px */
   text-transform: uppercase;
 }
+/* Меню dropdown на больших экранах */
+@media (min-width: 1200px) {
+  .navbar-expand-xl .navbar-nav .dropdown-menu {
+    top: 32px;
+  }
+}
+/* Для десктопа: показываем dropdown при наведении */
+@media (min-width: 1199px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .dropdown-toggle-custom {
+    pointer-events: none;
+  }
+}
+/* Стрелка для dropdown */
+.dropdown-toggle-custom {
+  border: none;
+  background: none;
+  padding: 0;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.dropdown-toggle-custom svg {
+  width: 12px;
+  height: 12px;
+}
+/* Для мобильных: стрелка кликабельная */
+@media (max-width: 1200px) {
+  .dropdown-toggle-custom {
+    pointer-events: auto;
+  }
+  .navbar-nav .dropdown-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+/* Отступ для ссылки внутри dropdown */
+.dropdown .nav-link {
+  padding-right: 4px !important;
+}
+/* Стили для пунктов выпадающего меню */
+.dropdown-item {
+  font-weight: 600;
+}

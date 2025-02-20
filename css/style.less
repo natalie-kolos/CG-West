@@ -1209,3 +1209,64 @@ gap: 8px;
     text-transform: uppercase;
   }
 }
+
+// Custom Menu Dropdown
+
+@desktop: 1200px;
+@tablet: 1199px;
+
+/* Меню dropdown на больших экранах */
+@media (min-width: @desktop) {
+  .navbar-expand-xl .navbar-nav .dropdown-menu {
+    top: 32px;
+  }
+}
+
+/* Для десктопа: показываем dropdown при наведении */
+@media (min-width: @tablet) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-toggle-custom {
+    pointer-events: none; // Делаем стрелку некликабельной на десктопе
+  }
+}
+
+/* Стрелка для dropdown */
+.dropdown-toggle-custom {
+  border: none;
+  background: none;
+  padding: 0;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Для мобильных: стрелка кликабельная */
+@media (max-width: @desktop) {
+  .dropdown-toggle-custom {
+    pointer-events: auto; // Активируем кликабельность
+  }
+
+  .navbar-nav .dropdown-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/* Отступ для ссылки внутри dropdown */
+.dropdown .nav-link {
+  padding-right: 4px !important;
+}
+
+/* Стили для пунктов выпадающего меню */
+.dropdown-item {
+  font-weight: 600;
+}

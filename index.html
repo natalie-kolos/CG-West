@@ -10,8 +10,12 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css"
     href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-    <!-- Fancybox CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox.css"/>
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox.css" />
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
   <link rel="stylesheet" href="css/style.css">
 
 
@@ -39,7 +43,6 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Offcanvas (Shared Menu) -->
         <div class="offcanvas offcanvas-start offcanvas-xl navbar-custom" tabindex="-1" id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
@@ -48,11 +51,17 @@
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Services
-                </a>
+              <li class="nav-item dropdown d-flex justify-content-center align-items-center flex-wrap">
+                <!-- Services - остается ссылкой -->
+                <a class="nav-link" href="services.html">Services</a>
+                <!-- Стрелка в формате SVG -->
+                <button class="dropdown-toggle-custom" data-bs-toggle="dropdown" aria-expanded="false">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7" fill="none">
+                    <path
+                      d="M10.998 0.75645L5.99995 5.62845L1.00195 0.75645C0.91266 0.66922 0.792784 0.620385 0.667954 0.620385C0.543124 0.620385 0.423248 0.66922 0.333954 0.75645C0.290716 0.798814 0.256366 0.84938 0.232916 0.905186C0.209466 0.960992 0.197388 1.02092 0.197388 1.08145C0.197388 1.14198 0.209466 1.20191 0.232916 1.25771C0.256366 1.31352 0.290716 1.36409 0.333954 1.40645L5.65095 6.59045C5.74433 6.68146 5.86956 6.7324 5.99995 6.7324C6.13035 6.7324 6.25558 6.68146 6.34895 6.59045L11.666 1.40745C11.7095 1.36505 11.7441 1.31436 11.7677 1.25837C11.7914 1.20238 11.8035 1.14222 11.8035 1.08145C11.8035 1.02068 11.7914 0.960518 11.7677 0.904527C11.7441 0.848536 11.7095 0.797846 11.666 0.75545C11.5767 0.66822 11.4568 0.619385 11.332 0.619385C11.2071 0.619385 11.0872 0.66822 10.998 0.75545V0.75645Z"
+                      fill="black" />
+                  </svg>
+                </button>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Food</a></li>
                   <li><a class="dropdown-item" href="#">Another</a></li>
@@ -75,6 +84,7 @@
             </ul>
           </div>
         </div>
+
       </div>
     </nav>
   </header>
