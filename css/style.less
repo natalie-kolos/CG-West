@@ -66,7 +66,7 @@ h6 {
 }
 
 .btn-custom {
-  padding: 10px 24px 8px 24px;
+  padding: 16px 24px 14px 24px;
   border-radius: @border-radius-sm;
   transition: @transition;
   font-family: @font-primary;
@@ -76,7 +76,7 @@ h6 {
   line-height: normal;
   letter-spacing: 0.4px;
   flex-shrink: 0;
-  min-height: 45px;
+  min-height: 57px;
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -187,22 +187,24 @@ h6 {
     margin-right: 0;
     letter-spacing: .2px;
     text-align: center;
+    
 
     img {
-      width: 260px;
+      width: 240px;
     }
 
     p {
       border-top: 2px solid #1D306A;
       text-align: center;
 
-      font-size: 14px;
+      font-size: 12px;
       font-style: normal;
       font-weight: 600;
       line-height: 160%;
       /* 22.4px */
       padding-top: 4px;
       margin-bottom: 0;
+      letter-spacing: 0;
     }
 
 
@@ -247,7 +249,7 @@ h6 {
 
     @media @breakpoint-tablet-min {
       width: 100% !important;
-      padding: 0 72px 0 24px;
+      padding: 0 24px 0 24px;
       justify-content: center;
 
       @media @breakpoint-laptop {
@@ -267,6 +269,7 @@ h6 {
       &.nav-secondary {
         .nav-link {
           color: @secondary;
+          font-size: 22px;
         }
       }
 
@@ -333,6 +336,10 @@ h6 {
 
   a {
     color: @primary;
+  }
+
+  .btn-close {
+    background-image: url(..//img/icon-cross.svg);
   }
 }
 
@@ -407,12 +414,17 @@ h6 {
 }
 
 .carousel-custom {
+  .carousel-item {
+
+    img {
+      &.w-100{
+      filter: brightness(60%);
+      }
+    }
+  }
 
   .carousel-indicators {
-    @media @breakpoint-tablet {
-      bottom: -20px;
-
-    }
+   
 
     .carousel-indicators [data-bs-target] {
       @media @breakpoint-tablet {
@@ -428,17 +440,17 @@ h6 {
     transform: translateY(-50%);
     bottom: auto;
 
-    @media @breakpoint-tablet {
-      top: 0;
-      transform: inherit;
-      position: relative;
-      right: 0;
-      left: 0;
-    }
+    // @media @breakpoint-tablet {
+    //   top: 0;
+    //   transform: inherit;
+    //   position: relative;
+    //   right: 0;
+    //   left: 0;
+    // }
 
-    h1 {
+    span {
       color: @white;
-
+      font-family: @font-primary;
       font-size: 68px;
       font-style: normal;
       font-weight: 700;
@@ -446,7 +458,7 @@ h6 {
 
       @media @breakpoint-tablet {
         font-size: 32px;
-        color: @text;
+        
       }
     }
 
@@ -460,7 +472,7 @@ h6 {
       /* 48px */
       @media @breakpoint-tablet {
         font-size: 20px;
-        color: @text;
+       
       }
     }
 
@@ -469,6 +481,7 @@ h6 {
 }
 
 .block-regular {
+  padding: 40px 0;
 
 
   .block-regular-img {
@@ -511,6 +524,7 @@ h6 {
 
   @media @breakpoint-mobile {
     background: linear-gradient(180deg, @dark 0%, @dark 98%, #FFF 98%);
+    padding-right: 2%;
   }
 
   &::before {
@@ -523,6 +537,7 @@ h6 {
 
     @media @breakpoint-mobile {
       background: linear-gradient(0deg, #385FCB 0%, #385FCB 98%, #FFF 98%);
+      width: 2%;
     }
   }
 
@@ -584,6 +599,11 @@ h6 {
   border-image: linear-gradient(90deg, #385FCB 0%, #385FCB 8%, #C59541 8%, #DB9D2B 100%) 1;
   margin-bottom: 32px;
 
+  @media @breakpoint-tablet-min {
+    height: 100%;
+    margin-bottom: 0;
+  }
+
   .service-card__info {
     padding: 30px 34px;
   }
@@ -613,14 +633,7 @@ h6 {
 }
 
 .features {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  gap: 24px;
-
-  @media @breakpoint-mobile {
-    flex-wrap: wrap;
-  }
+  
 
 
 
@@ -638,6 +651,7 @@ h6 {
       justify-content: center;
       margin: 0 auto;
       margin-bottom: 16px;
+      flex-shrink: 0;
     }
 
     p {
@@ -648,10 +662,39 @@ h6 {
   &.features-list {
     flex-wrap: wrap;
     gap: 0;
+    display: flex;
+    justify-content: center;
+    
+    flex-wrap: wrap;
+    align-items: center;
 
     .features-block {
       width: 33%;
       padding: 12px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      .features-block__img {
+        width: 78px;
+        height: 78px;
+        margin: 0;
+        flex-shrink: 0;
+
+        img {
+          width: 44px;
+          height: 44px;
+        }
+        p{
+          margin-bottom: 0;
+        }
+      }
+
+
+
+      p {
+        text-align: left;
+      }
 
       @media @breakpoint-mobile {
         width: 50%;
@@ -668,6 +711,7 @@ h6 {
   border-bottom: 8px solid;
   border-image: linear-gradient(90deg, #385FCB 0%, #385FCB 8%, #C59541 8%, #DB9D2B 100%) 1;
   color: @white;
+  z-index: -1;
 }
 
 .section-imgbg {
@@ -677,6 +721,22 @@ h6 {
   position: relative;
   z-index: 1;
   background-size: cover;
+  margin-bottom: 56px;
+  &:before{
+    content: "";
+    background-color: #000;
+    opacity: .3;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    display: block;
+    top: 0;
+  }
+  .title-wrap a {
+    color: @white;
+
+}
 
   &.section-imgbg-offset {
     padding-top: 40px;
@@ -693,6 +753,14 @@ h6 {
     }
   }
 
+  &.section-form {
+    .title-wrap {
+      color: @white;
+    }
+    textarea{
+      height: 100px;
+    }
+  }
 
 }
 
@@ -765,6 +833,14 @@ h6 {
     height: 44px;
   }
 
+  .slick-next {
+    right: -44px;
+  }
+
+  .slick-prev {
+    left: -44px;
+  }
+
   .slick-next:before {
     content: url(../img/icon-square-arrow-next.svg);
   }
@@ -803,8 +879,13 @@ h6 {
 .contact-content {
   display: flex;
   gap: 40px;
-  flex-wrap: wrap;
+
   justify-content: space-evenly;
+
+  @media @breakpoint-tablet {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 
   .contact-column {
 
@@ -1079,8 +1160,11 @@ h6 {
     justify-content: center;
     margin: 0 auto;
     margin-bottom: 24px;
+    flex-shrink: 0;
   }
-
+textarea{
+height: 100px;
+}
   h4 {
     font-size: 20px;
   }
@@ -1103,6 +1187,9 @@ h6 {
 
 .contact-form {
   padding: 80px 0;
+  textarea {
+    height: 100px!important;
+}
 }
 
 .areas-block {
@@ -1125,6 +1212,7 @@ article {
       li {
         counter-increment: my-awesome-counter;
         margin-bottom: 16px;
+        position: relative;
 
         &::before {
           content: counter(my-awesome-counter) " ";
@@ -1138,6 +1226,9 @@ article {
           justify-content: center;
           align-items: center;
           margin-right: 12px;
+          position: absolute;
+    left: -32px;
+    top: 3px;
         }
       }
     }
@@ -1155,6 +1246,7 @@ article {
       li {
         list-style-image: none;
         margin-bottom: 16px;
+        position: relative;
 
         &::before {
           content: url(../img/check.svg);
@@ -1169,6 +1261,9 @@ article {
           align-items: center;
           margin-right: 12px;
           vertical-align: middle;
+          position: absolute;
+    left: -32px;
+    top: 3px;
         }
 
       }
@@ -1176,7 +1271,7 @@ article {
   }
 }
 
-.blockquote {
+blockquote {
   color: @secondary;
 
   font-size: 20px;
@@ -1188,15 +1283,17 @@ article {
   border-image: linear-gradient(180deg, #385FCB 0%, #385FCB 8%, #C59541 8%, #DB9D2B 100%) 1;
   padding-left: 32px;
 }
-.blog-info{
+
+.blog-info {
   border-top: 1px solid @neutral;
   padding: 12px;
   margin-top: 24px;
 }
+
 .blog-share {
   display: flex;
   align-items: baseline;
-gap: 8px;
+  gap: 8px;
 
   h4 {
     color: @secondary;
@@ -1222,18 +1319,27 @@ gap: 8px;
   }
 }
 
+.dropdown-menu {
+  &.show {
+    display: flex;
+  }
+}
+
 /* Для десктопа: показываем dropdown при наведении */
 @media (min-width: @tablet) {
   .nav-item.dropdown:hover .dropdown-menu {
-    display: block;
+    display: flex;
+    border: 1px solid @neutral;
   }
 
   .dropdown-toggle-custom {
     pointer-events: none; // Делаем стрелку некликабельной на десктопе
+
   }
 }
 
-.dropdown-item.active, .dropdown-item:active {
+.dropdown-item.active,
+.dropdown-item:active {
   color: @primary;
   background-color: transparent;
 }
@@ -1258,6 +1364,8 @@ gap: 8px;
 @media (max-width: @desktop) {
   .dropdown-toggle-custom {
     pointer-events: auto; // Активируем кликабельность
+    width: 44px;
+    height: 44px;
   }
 
   .navbar-nav .dropdown-menu {
@@ -1274,4 +1382,76 @@ gap: 8px;
 /* Стили для пунктов выпадающего меню */
 .dropdown-item {
   font-weight: 600;
+}
+
+
+
+.navbar-main-custom {
+  @media @breakpoint-tablet-min {
+    padding-left: 56px;
+    padding-right: 44px;
+  }
+}
+
+.dropdown-menu {
+
+  flex-wrap: wrap;
+  width: 540px;
+  /* Настроить ширину */
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  background: #fff;
+}
+
+.dropdown-menu li {
+  flex: 1 1 50%;
+  /* Два столбца */
+  list-style: none;
+  border-bottom: 1px solid #eee;
+  /* Разделение строк */
+  padding: 8px 12px;
+  transition: background 0.3s ease;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  padding: 4px 0;
+  font-weight: 400;
+  white-space: pre-wrap;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  @media @breakpoint-tablet {
+    text-align: center;
+  }
+
+}
+
+
+
+
+/* Эффект при наведении */
+.dropdown-menu li:hover {
+  border-bottom: 1px solid @secondary;
+}
+
+.dropdown-menu li:hover a {
+
+  color: @secondary;
+  /* Выделение текста */
+}
+
+.navbar-custom {
+  &.show {
+    width: 100% !important;
+  }
+}
+
+.block-title{
+  text-transform: uppercase;
 }

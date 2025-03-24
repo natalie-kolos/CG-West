@@ -6,7 +6,7 @@ $('.testimonials-slider').slick({
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 992,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
